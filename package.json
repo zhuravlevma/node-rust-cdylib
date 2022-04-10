@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.node",
   "scripts": {
-    "start": "rm -f index.node && npm run build-release && node node/main.js",
+    "start": "rm -f ./index.node && npm run build-release && node node/main.js",
     "build": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
     "build-debug": "npm run build --",
     "build-release": "npm run build -- --release",

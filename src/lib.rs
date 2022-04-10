@@ -1,15 +1,10 @@
 use neon::prelude::*;
 use quad_rand as qrand;
 
-fn hello(mut cx: FunctionContext) -> JsResult<JsString> {
-    Ok(cx.string("hello node"))
-}
-
 #[neon::main]
 fn main(mut cx: ModuleContext) -> NeonResult<()> {
-    cx.export_function("hello", hello)?;
-    cx.export_function("fibonacci", fibonacci_api)?;
-    cx.export_function("matrix", matrix_api)?;
+    cx.export_function("fibonacci_rs", fibonacci_api)?;
+    cx.export_function("matrix_rs", matrix_api)?;
     Ok(())
 }
 
